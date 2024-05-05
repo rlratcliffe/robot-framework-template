@@ -17,10 +17,10 @@ jobs:
           pip install robotframework
           pip install --upgrade RESTinstance
           pip install --upgrade robotframework-seleniumlibrary
-      - name: Install Chrome for Testing and its driver
-        run: |
-          npm i puppeteer
-          npx @puppeteer/browsers install chrome@stable
+      - uses: browser-actions/setup-chrome@v1
+        with:
+          chrome-version: 120
+          install-dependencies: true
       - name: Run Test
         run: python -m robot --outputdir results Tests
       - name: Publish test results
