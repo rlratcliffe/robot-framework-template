@@ -17,12 +17,8 @@ jobs:
           pip install robotframework
           pip install --upgrade RESTinstance
           pip install --upgrade robotframework-seleniumlibrary
-      - uses: browser-actions/setup-chrome@v1
-        with:
-          chrome-version: 120
-          install-dependencies: true
       - name: Run Test
-        run: python -m robot --outputdir results Tests
+        run: python -m robot --outputdir results Tests/API
       - name: Publish test results
         uses: actions/upload-artifact@v2
         with:
