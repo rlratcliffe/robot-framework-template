@@ -10,4 +10,4 @@ the site loads
     Wait For Condition    return document.title == "JSONPlaceholder - Free Fake REST API"
     
 the expected text appears
-    Page Should Contain    {JSO} Placeholder
+    Page Should Contain    {JSON} Placeholder

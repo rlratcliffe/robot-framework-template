@@ -8,5 +8,5 @@ I am a user
 I do a GET
     GET         https://jsonplaceholder.typicode.com/users
 Then I retrieve the correct data
-    Object   $
-    Integer    $[1].id    1
+    Array   $
+    Integer    $[1].id    2
